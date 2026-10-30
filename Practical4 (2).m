@@ -1,0 +1,23 @@
+clc;
+clear; 
+close all; 
+t = -5:0.01:5;
+x = exp(-t.^2); 
+xe = (x + fliplr(x))/2; 
+xo = (x - fliplr(x))/2;
+E = sum(x.^2)*0.01;
+subplot(2,2,1);
+plot(t,x);
+title('original');
+subplot(2,2,2);
+plot(t,xe);
+title('even'); 
+subplot(2,2,3);
+plot(t,xo);
+title('odd');
+subplot(2,2,4);
+plot(t,x.^2);
+title('energy signal');
+grid on;
+disp(['energy = ',num2str(E)]);
+

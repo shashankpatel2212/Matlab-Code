@@ -1,0 +1,21 @@
+clc; 
+clear all; 
+close all; 
+n = -10:10; 
+u = (n>=0); 
+imp = (n==0); 
+r = n.*u; 
+s = sign(n); 
+subplot(2,2,1); 
+stem(n,imp); 
+title('impulse'); 
+subplot(2,2,2); 
+stem(n,u); 
+title('step'); 
+subplot(2,2,3);
+stem(n,r);
+title('ramp'); 
+subplot(2,2,1); 
+stem(n,s); 
+title('signum');
+
